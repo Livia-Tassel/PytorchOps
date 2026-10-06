@@ -20,6 +20,7 @@ def solve(
         q,
         k.transpose(1, 2)
     ) / (d_k ** 0.5)
+    
     attn = torch.softmax(scores, dim=-1)
     heads = attn @ v
 
